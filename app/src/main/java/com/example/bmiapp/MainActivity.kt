@@ -1,4 +1,4 @@
-package com.example.bmiapp.feature_profile.presentation
+package com.example.bmiapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
