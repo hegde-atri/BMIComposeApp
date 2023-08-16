@@ -1,0 +1,59 @@
+#+title: App with Clean MVVM Architecture.
+#+author: Atri Hegde
+
+* Preface
+
+Advantage of good MVVM and smaller modules
+- Easier to read.
+- Smaller modules build faster.
+
+* TOC :TOC:
+- [[#preface][Preface]]
+- [[#structure][Structure]]
+  - [[#core][Core]]
+  - [[#feature][Feature]]
+  - [[#ui][UI]]
+- [[#plugins][Plugins]]
+  - [[#androidxroom][androidx.room]]
+
+* Structure
+
+#+begin_src
+ .
+├──  core
+│  └──  presentation
+│     └──  components
+├──  feature_bmi
+├──  feature_profile
+│  ├──  data
+│  │  ├──  data_source
+│  │  └──  repository
+│  ├──  domain
+│  │  ├──  model
+│  │  ├──  repository
+│  │  ├──  use_case
+│  │  └──  util
+│  └──  presentation
+│     ├──  profile
+│     │  └──  components
+│     └──  util
+├──  MainActivity.kt
+└──  ui
+   └──  theme
+      ├──  Color.kt
+      ├──  Theme.kt
+      └──  Type.kt
+#+end_src
+
+** Core
+This will contain shared items between the "features".
+** Feature
+A feature is a set of one or multiple screens.
+*** Data
+*** Domain
+*** Presentation
+** UI
+This will contain the theme folder with theme settings.
+
+* Plugins
+** androidx.room
